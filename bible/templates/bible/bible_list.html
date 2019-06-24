@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<script src="https://kit.fontawesome.com/16921bf09d.js"></script>
+
+<img class="mt-5" src="{% static 'bible01.PNG' %}" width="100%">
+{% for i in bible %}
+<a href="{% url 'bible:bible_detail' i.pk %}"><img src="{{ i.image.url }}" width="100%"></a>
+{% endfor %}
+<button type="button" onclick="play()"><img class="fixed" width="30px" src="{% static 'speaker.png' %}"></button>
+<audio id="audio" src="{% static 'test.mp3' %}"></audio>
+
+<div class="fixed-bottom">
+    <audio controls style="width:100%" controlsList="nodownload">
+        <source src="{% static 'total.mp3' %}" type="audio/mp3">
+    </audio>
+</div>
+
+
+
+{% endblock %}

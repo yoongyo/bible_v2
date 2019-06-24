@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    ol {
+        padding-left: 30px;
+    }
+    li:not(.nav-item)  {
+        font-size:24px;
+
+    }
+</style>
+<div class="container-fluid mt-5 p-0">
+    <img class="mt-3" src="{{ bible.image.url }}" width="100%">
+    <div>
+        {{ bible.content|safe }}
+    </div>
+    <div class="row mx-1 mb-2">
+        <div class="col-4 p-1">
+            <button type="button" onclick="play()" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span id="play" class="text-center p-2">설명듣기</span>
+            </button>
+        </div>
+        <div class="col-4 p-1">
+            <button type="button" onclick="stop()" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">설명중지</span>
+            </button>
+        </div>
+        <div class="col-4 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:shortcut' %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">바로가기</span>
+            </button>
+        </div>
+    </div>
+    <audio id="audio" src="{{ bible.mp3.url }}"></audio>
+    <script>
+    function play() {
+        var audio = document.getElementById("audio");
+        var play = document.getElementById("play");
+        if (play.innerHTML == "일시정지"){
+            audio.pause();
+            play.innerHTML = "설명듣기";
+        }else{
+            audio.play();
+            play.innerHTML = "일시정지";
+        }
+    }
+    function stop() {
+        var audio = document.getElementById("audio");
+        audio.pause();
+        audio.currentTime = 0;
+    }
+    </script>
+</div>
+{% endblock %}

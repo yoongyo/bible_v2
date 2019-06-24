@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+    <head>
+        <meta charset="utf-8">
+        <!-- 부트스트랩 모바일 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 부트스트랩 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        .navbar-toggler .navbar-toggler-icon {
+            border-color: rgb(255,255,255);
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+        .custom-toggler.navbar-toggler {
+            border-color: rgb(176, 193, 251);
+        }
+
+    </style>
+    {% load static %}
+    <body>
+    <nav class="navbar fixed-top navbar-light" style="background-color:rgb(176, 193, 251);">
+	    <a class="navbar-brand" href="{% url 'bible:bible_list' %}" style="color:white">키워드로 보는 성경</a>
+        <button class="navbar-toggler custom-toggler px-0" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar1">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'bible:introduction' %}">소개</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'bible:shape' %}">도형설명</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'bible:shortcut' %}">바로가기</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

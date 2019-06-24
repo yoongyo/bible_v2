@@ -1,0 +1,448 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-fluid mt-5">
+    <div style="height:12px"></div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <h4 class="m-0 text-center">구약목록</h4>
+        </div>
+        <div class="col-6 p-1">
+            <h4 class="m-0 text-center">신약목록</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 4 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">창세기</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 69 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">마태복음</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 5 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">출애굽기</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 64 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">마가복음</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 6 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">레위기</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 58 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">누가복음</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 7 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">민수기</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 70 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">요한복음</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 8 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">신명기</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 59 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">사도행전</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 9 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">여호수아</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 52 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">로마서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 10 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">사사기</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 49 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">고린도전서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 11 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">룻기</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 50 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">고린도후서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 12 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">사무엘상하</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 51 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">갈라디아서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 13 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">열왕기상하</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 53 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">에베소서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 29 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">역대상하</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 55 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">빌립보서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 33 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">에스라</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 54 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">골로새서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 34 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">느헤미야</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 47 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">데갈로니가전서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 32 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">에스더</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 48 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">데갈로니가후서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 38 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">욥기</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 60 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">디모데전서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 36 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">시편</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 61 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">디모데후서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 37 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">잠언</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 62 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">디도서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 39 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">전도서</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 55 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">빌레몬서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 40 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">아가</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 65 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">히브리서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 19 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">이사야</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 66 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">야고보서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 24 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">예레미야</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 63 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">베드로전서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 25 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">예레미야애가</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 67 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">베드로후서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 26 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">에스겔</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 71 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">요한일서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 29 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">다니엘</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 72 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">요한이서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 16 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">호세아</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 73 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">요한삼서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 17 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">요엘</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 68 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">유다서</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 15 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">아모스</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 74 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">요한계시록</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 23 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">오바댜</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 3 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">전체개요</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 14 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">요나</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 28 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">포로 후 변화</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 18 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">미가</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 41 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">중간기 제국 역할</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 20 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">나훔</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 42 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">중간기 기대</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 22 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">하박국</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 43 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">하나님 나라 추구</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 21 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">스바냐</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 44 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">하나님 나라 논쟁</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 30 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">학개</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 45 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">하나님 나라 회복</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 31 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">스가랴</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 46 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">하나님 나라 전파</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_detail' 35 %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2">말라기</span>
+            </button>
+        </div>
+        <div class="col-6 p-1">
+            <button type="button" onclick="location.href='{% url 'bible:bible_list' %}'" class="btn btn-default" style="width: 100%;background-color: rgb(215,215,215);">
+                <span class="text-center p-2"></span>
+            </button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
