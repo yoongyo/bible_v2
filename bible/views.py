@@ -26,3 +26,7 @@ def introduction(request):
 
 def shape(request):
     return render(request, 'bible/shape.html')
+
+
+def personal_information(request):
+    return render(request, 'bible/personal_information.html')
